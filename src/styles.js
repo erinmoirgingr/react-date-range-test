@@ -122,7 +122,73 @@ const defaultTheme = {
     background    : '#ecf0f1',
     textDecoration: 'none',
     marginBottom  : 6,
-  }
+  },
+
+  TimePicker : {
+    width         : 350,
+    padding       : 10,
+    background    : '#ffffff',
+    borderRadius  : '2px',
+    display       : 'inline-block',
+    boxSizing     : 'border-box',
+    verticalAlign : 'top',
+    letterSpacing : 0,
+    color         : '#000000',
+  },
+
+  TimeHeader : {
+    display       : 'block',
+    boxSizing     : 'border-box',
+    background    : '#ffffff',
+    textAlign     : 'center',
+    fontSize      : 12,
+    fontWeight    : '600',
+    marginBottom  : 5
+  },
+
+  Time : {
+    boxSizing     : 'border-box',
+    display       : 'inline-block',
+    letterSpacing : 'initial',
+    textAlign     : 'left',
+    fontSize      : 12,
+    paddingLeft   : 5,
+    cursor        : 'pointer',
+    transition    : 'transform .1s ease',
+    width         : '20%',
+  },
+
+  TimePassive : {
+    opacity       : 0.4,
+    cursor        : 'normal'
+  },
+
+  TimeHover : {
+    background    : '#bdc3c7',
+  },
+
+  TimeActive : {
+    background    : '#95a5a6',
+    color         : '#ffffff',
+    transform     : 'scale(0.9)',
+  },
+
+  TimeSelected : {
+    background    : '#e74c3c',
+    color         : '#ffffff',
+  },
+
+  TimeInRange : {
+    background    : '#34495e',
+    color         : '#95a5a6',
+  },
+
+  TimeRange : {
+    display       : 'block',
+    boxSizing     : 'border-box',
+    background    : '#ffffff',
+    borderRadius  : '2px',
+  },
 }
 
 export default (customTheme = {}) => {
@@ -178,6 +244,24 @@ export default (customTheme = {}) => {
 
     PredefinedRanges : { ...defaultTheme.PredefinedRanges, ...customTheme.PredefinedRanges },
 
-    PredefinedRangeItem : { ...defaultTheme.PredefinedRangeItem, ...customTheme.PredefinedRangeItem }
+    PredefinedRangeItem : { ...defaultTheme.PredefinedRangeItem, ...customTheme.PredefinedRangeItem },
+
+    TimePicker : { ...defaultTheme.TimePicker, ...customTheme.TimePicker },
+
+    TimeHeader : { ...defaultTheme.TimeHeader, ...customTheme.TimeHeader },
+
+    Time : { ...defaultTheme.Time, ...customTheme.Time },
+
+    TimePassive : { ...defaultTheme.TimePassive, ...customTheme.TimePassive },
+
+    TimeHover : { ...defaultTheme.TimeHover, ...customTheme.TimeHover },
+
+    TimeActive : { ...defaultTheme.TimeActive, ...customTheme.TimeActive },
+
+    TimeSelected : { ...defaultTheme.TimeSelected, ...customTheme.TimeSelected },
+
+    TimeInRange : { ...defaultTheme.TimeInRange, ...customTheme.TimeInRange },
+
+    TimeRange : { ...defaultTheme.TimeRange, ...customTheme.TimeRange },
   }
 }
