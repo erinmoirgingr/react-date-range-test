@@ -149,7 +149,7 @@ class Calendar extends Component {
     const diff = (Math.abs(firstDayOfWeek - (startOfMonth + 7)) % 7);
     for (let i = diff; i >= 1; i--) {
       const dayMoment  = lastMonth.clone().date(lastMonthDayCount - i);
-      days.push({ dayMoment, isPassive : true });
+      days.push({ dayMoment, isPassive : this.props.allowPassive });
     }
 
     // Current month's days
@@ -162,7 +162,7 @@ class Calendar extends Component {
     const remainingCells = 42 - days.length; // 42cells = 7days * 6rows
     for (let i = 1; i <= remainingCells; i++ ) {
       const dayMoment  = nextMonth.clone().date(i);
-      days.push({ dayMoment, isPassive : true });
+      days.push({ dayMoment, isPassive : this.props.allowPassive });
     }
 
     return days.map((data, index) => {
@@ -198,8 +198,9 @@ class Calendar extends Component {
 }
 
 Calendar.defaultProps = {
-  format    : 'DD/MM/YYYY',
-  theme     : {},
+  format       : 'DD/MM/YYYY',
+  theme        : {},
+  allowPassive : false
 }
 
 Calendar.propTypes = {
@@ -219,6 +220,7 @@ Calendar.propTypes = {
   }), PropTypes.bool]),
   linkCB         : PropTypes.func,
   theme          : PropTypes.object,
+  allowPassive:  : PropTypes.bool
 }
 
 export default Calendar;
