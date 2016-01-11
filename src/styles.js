@@ -83,6 +83,7 @@ const defaultTheme = {
     boxShadow     : 'none',
     outline       : 'none',
     borderRadius  : '50%',
+    cursor        : 'pointer',
   },
 
   MonthArrow : {
@@ -91,6 +92,7 @@ const defaultTheme = {
     height        : 0,
     padding       : 0,
     margin        : 0,
+    marginTop     : 4,
     border        : '4px solid transparent',
     textAlign     : 'center'
   },
