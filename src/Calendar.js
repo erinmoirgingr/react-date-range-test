@@ -220,7 +220,7 @@ Calendar.propTypes = {
   }), PropTypes.bool]),
   linkCB         : PropTypes.func,
   theme          : PropTypes.object,
-  allowPassive:  : PropTypes.bool
+  allowPassive   : PropTypes.bool
 }
 
 export default Calendar;
