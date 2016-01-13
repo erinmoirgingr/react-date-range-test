@@ -85,23 +85,23 @@ class Calendar extends Component {
 
     return (
       <div style={styles['MonthAndYear']} className='rdr-MonthAndYear-innerWrapper'>
-        <button
+        <div
           style={{ ...styles['MonthButton'], float : 'left' }}
           className='rdr-MonthAndYear-button prev'
           onClick={this.changeMonth.bind(this, -1, false)}>
           <i style={{ ...styles['MonthArrow'], ...styles['MonthArrowPrev'] }}></i>
-        </button>
+        </div>
         <span>
           <span className='rdr-MonthAndYear-month'>{month}</span>
           <span className='rdr-MonthAndYear-divider'> - </span>
           <span className='rdr-MonthAndYear-year'>{year}</span>
         </span>
-        <button
+        <div
           style={{ ...styles['MonthButton'], float : 'right' }}
           className='rdr-MonthAndYear-button next'
           onClick={this.changeMonth.bind(this, +1, false)}>
           <i style={{ ...styles['MonthArrow'], ...styles['MonthArrowNext'] }}></i>
-        </button>
+        </div>
       </div>
     )
   }
@@ -220,7 +220,7 @@ Calendar.propTypes = {
   }), PropTypes.bool]),
   linkCB         : PropTypes.func,
   theme          : PropTypes.object,
-  allowPassive:  : PropTypes.bool
+  allowPassive   : PropTypes.bool
 }
 
 export default Calendar;
