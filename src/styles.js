@@ -7,7 +7,7 @@ const defaultTheme = {
   },
 
   Calendar        : {
-    width         : 280,
+    width         : 281,
     padding       : 10,
     background    : '#ffffff',
     borderRadius  : '2px',
