@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 import moment from 'moment';
 import parseInput from './utils/parseInput.js';
 import DayCell from './DayCell.js';
@@ -20,7 +20,7 @@ function checkEdges(dayMoment, range) {
   )
 }
 
-class Calendar extends Component {
+class Calendar extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -178,8 +178,7 @@ class Calendar extends Component {
           theme={ styles }
           isSelected={ isSelected || isEdge }
           isInRange={ isInRange }
-          key={ index }
-        />
+          key={ index } />
       );
     })
   }
@@ -204,23 +203,23 @@ Calendar.defaultProps = {
 }
 
 Calendar.propTypes = {
-  sets           : PropTypes.string,
-  range          : PropTypes.shape({
-    startDate    : PropTypes.object,
-    endDate      : PropTypes.object
+  sets           : React.PropTypes.string,
+  range          : React.PropTypes.shape({
+    startDate    : React.PropTypes.object,
+    endDate      : React.PropTypes.object
   }),
-  date           : PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.func]),
-  format         : PropTypes.string.isRequired,
-  firstDayOfWeek : PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  onChange       : PropTypes.func,
-  onInit         : PropTypes.func,
-  link           : PropTypes.oneOfType([PropTypes.shape({
-    startDate    : PropTypes.object,
-    endDate      : PropTypes.object,
-  }), PropTypes.bool]),
-  linkCB         : PropTypes.func,
-  theme          : PropTypes.object,
-  allowPassive   : PropTypes.bool
+  date           : React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.string, React.PropTypes.func]),
+  format         : React.PropTypes.string.isRequired,
+  firstDayOfWeek : React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.string]),
+  onChange       : React.PropTypes.func,
+  onInit         : React.PropTypes.func,
+  link           : React.PropTypes.oneOfType([React.PropTypes.shape({
+    startDate    : React.PropTypes.object,
+    endDate      : React.PropTypes.object,
+  }), React.PropTypes.bool]),
+  linkCB         : React.PropTypes.func,
+  theme          : React.PropTypes.object,
+  allowPassive   : React.PropTypes.bool
 }
 
 export default Calendar;
