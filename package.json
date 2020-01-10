@@ -26,10 +26,11 @@
     "url": "http://github.com/Adphorus/react-date-range/issues"
   },
   "dependencies": {
-    "moment": "^2.10.6"
+    "moment": "^2.10.6",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-      "react": ">0.13.0"
+    "react": ">0.13.0"
   },
   "devDependencies": {
     "babel": "^5.8.23"
